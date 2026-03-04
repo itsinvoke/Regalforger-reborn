@@ -5,7 +5,6 @@ const mineflayer = require('mineflayer');
 const tpsPlugin = require('mineflayer-tps')(mineflayer);
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const { GoalBlock } = goals;
-const viewer = require('prismarine-viewer').mineflayer;
 
 // globals pulled from util.js
 const spam_count = {};
