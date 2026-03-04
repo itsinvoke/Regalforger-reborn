@@ -1,13 +1,16 @@
 name: 24/7 Regalforger Bot
 
 on:
-  workflow_dispatch: # Allows manual Start/Stop
-  schedule:
-    - cron: '0 */4 * * *' # Auto-restarts every 4 hours to bypass GitHub's 6h limit
+  workflow_dispatch:        # manual trigger
+  schedule:                 # scheduled restart every 4 h
+    - cron: '0 */4 * * *'
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    # ---- enable if you left the secrets under an environment named “.env” ----
+    environment: ".env"
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -17,7 +20,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Create .env file
@@ -25,7 +28,6 @@ jobs:
           echo "MC_PASSWORD=${{ secrets.MC_PASSWORD }}" >> .env
           echo "MC_USERNAME=${{ secrets.MC_USERNAME }}" >> .env
           echo "WHITELIST=${{ secrets.WHITELIST }}" >> .env
-          # optional stash/base coordinates
           echo "STASH_X=${{ secrets.STASH_X }}" >> .env
           echo "STASH_Y=${{ secrets.STASH_Y }}" >> .env
           echo "STASH_Z=${{ secrets.STASH_Z }}" >> .env
