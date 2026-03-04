@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "mineflayer": "^6.0.0",
+    "mineflayer": "^5.9.0",
     "mineflayer-tps": "^1.1.0",
     "mineflayer-pathfinder": "^4.0.0",
     "prismarine-viewer": "^1.10.0",
