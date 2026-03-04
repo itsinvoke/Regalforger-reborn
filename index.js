@@ -1059,7 +1059,7 @@ async function runRefill(bot, user) {
 // --- 4. STARTUP & PROXY FIX ---
 function startup() {
     const bot = mineflayer.createBot({
-        host: 'alt3.6b6t.org',
+        host: 'play.6b6t.org',
         username: process.env.MC_USERNAME || 'Regalforger',
         version: '1.20.1',
         auth: 'offline',
