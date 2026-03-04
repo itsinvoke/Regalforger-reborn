@@ -1,0 +1,17 @@
+{
+  "name": "regalforger-reborn",
+  "version": "1.0.0",
+  "description": "24/7 Regalforger bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mineflayer": "^6.0.0",
+    "mineflayer-tps": "^1.1.0",
+    "mineflayer-pathfinder": "^4.0.0",
+    "prismarine-viewer": "^1.10.0",
+    "minecraft-data": "^2.107.0"
+  }
+}
